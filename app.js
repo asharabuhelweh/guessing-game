@@ -58,18 +58,18 @@ if (greatPersonality==='yes'|| greatPersonality==='y' )
 {alert('thanx ^_^');}
 else{alert('I will work for that :)');}
 
-let favColor = prompt('is it the brown my favourit color?');
+let favColor = prompt('is it the brown my favourite color?');
 favColor= favColor.toLowerCase();
 console.log(likeDriving);
 
 while((favColor !=='yes') && (favColor !=='y') && (favColor !=='no') && (favColor !=='n'))
 {
-  favColor = prompt('is it the brown my favourit color?');
+  favColor = prompt('is it the brown my favourite color?');
 }
 
 if (favColor==='no'|| favColor==='n' )
-{alert('my favoutit color is red ^_^');}
-else{alert('sorry wrong answer,not my favourit *_*');}
+{alert('my favourite color is red ^_^');}
+else{alert('sorry wrong answer,not my favourite *_*');}
 
 alert('thank you for visiting our website and for your time ^_^ ' + userName);
 
