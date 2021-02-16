@@ -1,5 +1,5 @@
 'use strict';
-/*let a = 0;
+let a = 0;
 
 let userName = prompt('what is your name?');
 console.log(userName);
