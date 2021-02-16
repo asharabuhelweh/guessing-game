@@ -88,46 +88,51 @@ alert('now guessing number game ,be ready!');
 for (let i = 0; i < 4; i++) {
   let guessNumber1 = prompt('can you please guess a random number');
 
-  if (guessNumber1 === '3') {
-    alert('right guessing congrats ^_^');
-    a++;
-    condition1 = true;
-    break;
-  }
-  else if (guessNumber1 > 3) {
+  if (guessNumber1 > '3') {
     alert('too high');
   }
-  else (guessNumber1 < 3);
-  {
-    alert('too low');
+
+  else if (guessNumber1 < 3) { alert('too low'); }
+  else {
+    a++;
+    condition1 = true;
+    alert('right guessing congrats ^_^');
+    break;
   }
-  if (condition1 === false) {
-    alert('sorry but you have exhausted all attempts The correct answer is 3');
-  }
+}
+
+if (condition1 === false) {
+  alert('sorry but you have exhausted all attempts The correct answer is 3');
+}
 
 
 
-  let favDrink = ['tea', 'coffee', 'milk', 'nescafe', 'orange juice', 'pepsi'];
+let favDrink = ['tea', 'coffee', 'milk', 'nescafe', 'orange juice', 'pepsi'];
 
-  let condition2 = false;
+let condition2 = false;
+let drinkName = '';
+for (let j = 0; j < 6; j++) {
+  let drinkName = prompt('now can you guess what is my favorite drink? be careful you have 6 trails ');
+  for (let check = 0; check < favDrink.length; check++) {
+    if (drinkName === favDrink[check]) {
 
-  for (let j = 0; j < 6; j++) {
-    let drinkName = prompt('now can you guess what is my favorite drink? be careful you have 6 trails ');
-    for (let check = 0; check < favDrink.length; check++) {
-      if (drinkName === favDrink[check]) {
-        alert('great the correct answer is coffee');
-        a++;
-        condition2 = true;
-        break;
-      }
-    }
-    if (condition2 === true) {
+      a++;
+      condition2 = true;
+      alert('correct answer ^_^ ,the correct answers are ' + favDrink[0] + ',' + favDrink[1] + ',' + favDrink[2] + ',' + favDrink[3] + ',' + favDrink[4]) + ',' + favDrink[5] ;
+
       break;
     }
-    alert('sorry try again');
   }
-  if (condition2 === false) {
-    alert('sorry but you have exhausted all trails,the correct answer is coffee');
+  if (condition2 === true) {
+    break;
   }
-  alert('your score is ' + a + '/7');}
+  alert('sorry try again');
+}
+if (condition2 === false) {
+  alert('sorry but you have exhausted all trails,the correct answer are ' + favDrink[0] + ',' + favDrink[1] + ',' + favDrink[2] + ',' + favDrink[3] + ',' + favDrink[4]) + ',' + favDrink[5] ;
+
+
+}
+alert('your score is ' + a + '/7');
+
 
