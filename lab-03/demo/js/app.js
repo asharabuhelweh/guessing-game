@@ -1,28 +1,33 @@
 'use strict';
 let a = 0;
 
-let userName = prompt('what is your name?');
+let userName = prompt('what is your name?');                 //declaration varible user name to ask the user about the name
 console.log(userName);
 alert('Welcome to guessing game website ' + userName + '  ^_^ ');
 
 alert('I will ask you five questions about me,please answer with yes/y or no/n');
 
-let likePhotography = prompt('do I like photography?');
+//declaration varible likePhotography to ask the user and console the value
+
+let likePhotography = prompt('do I like photography?');          
 likePhotography = likePhotography.toLowerCase();
 
 console.log(likePhotography);
+
+// while loop to get specific answer from user yes/y/n/no
 while ((likePhotography !== 'yes') && (likePhotography !== 'y') && (likePhotography !== 'no') && (likePhotography !== 'n')) {
   likePhotography = prompt('do I like photography?');
 }
 
 
-if (likePhotography === 'yes' || likePhotography === 'y') {
+if (likePhotography === 'yes' || likePhotography === 'y') {    //condition to check the right answer
   alert('good guessing ^_^');
   a++;
 }
 
 else { alert('sorry but wrong answer'); }
 
+//declaration var. likeDriving
 
 let likeDriving = prompt('do I like driving?');
 likeDriving = likeDriving.toLowerCase();
@@ -31,12 +36,13 @@ console.log(likeDriving);
 while ((likeDriving !== 'yes') && (likeDriving !== 'y') && (likeDriving !== 'no') && (likeDriving !== 'n')) {
   likeDriving = prompt('do I like driving?');
 }
-if (likeDriving === 'yes' || likeDriving === 'y') {
+if (likeDriving === 'yes' || likeDriving === 'y') {            //condition to check the right answer
   alert('you are right ^_^');
   a++;
 }
 else { alert('sorry wrong answer,I do *_*'); }
 
+//declaration var. likeMeanPeople 
 
 let likeMeanPeople = prompt('do I like mean people?');
 likeMeanPeople = likeMeanPeople.toLowerCase();
@@ -51,6 +57,9 @@ if (likeMeanPeople === 'no' || likeMeanPeople === 'n') {
 }
 else { alert('no I do not like them *_*'); }
 
+//declaration var. greatPersonality
+
+
 let greatPersonality = prompt('do I have great personality?');
 greatPersonality = greatPersonality.toLowerCase();
 console.log(greatPersonality);
@@ -63,6 +72,8 @@ if (greatPersonality === 'yes' || greatPersonality === 'y') {
   a++;
 }
 else { alert('I will work for that :)'); }
+
+//declaration var.favColor
 
 let favColor = prompt('is it the brown my favourite color?');
 favColor = favColor.toLowerCase();
@@ -78,17 +89,17 @@ if (favColor === 'no' || favColor === 'n') {
 }
 else { alert('sorry wrong answer,not my favourite *_*'); }
 
-alert('thank you for visiting our website and for your time ^_^ ' + userName);
+
 
 let condition1 = false;
 
 
 alert('now guessing number game ,be ready!');
 
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 4; i++) {          //for loop to check the attemp numbers
   let guessNumber1 = prompt('can you please guess a random number');
 
-  if (guessNumber1 > '3') {
+  if (guessNumber1 > '3') {            //check the condition
     alert('too high');
   }
 
@@ -107,13 +118,14 @@ if (condition1 === false) {
 
 
 
-let favDrink = ['tea', 'coffee', 'milk', 'nescafe', 'orange juice', 'pepsi'];
+let favDrink = ['tea', 'coffee', 'milk', 'nescafe', 'orange juice', 'pepsi'];    //declartion favDrink array
 
 let condition2 = false;
-let drinkName = '';
-for (let j = 0; j < 6; j++) {
+
+for (let j = 0; j < 6; j++) {                                                   //for loop to check the attemp numbers
   let drinkName = prompt('now can you guess what is my favorite drink? be careful you have 6 trails ');
-  for (let check = 0; check < favDrink.length; check++) {
+
+  for (let check = 0; check < favDrink.length; check++) {                        //check the condition
     if (drinkName === favDrink[check]) {
 
       a++;
@@ -134,5 +146,6 @@ if (condition2 === false) {
 
 }
 alert('your score is ' + a + '/7');
+alert('thank you for visiting our website and for your time ^_^ ' + userName);
 
 
